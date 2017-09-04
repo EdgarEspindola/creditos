@@ -1,0 +1,28 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+edgar:
+   first_name: Edgar
+   second_name: Eduardo
+   second_last_name: Espindola
+   first_last_name: Rodriguez
+   birth_date: 2017-09-01
+   curp: RISE900920HDGSLD00
+   rfc: GCO040428SV5
+   gender: Masculino
+   birth_state: MyString
+   phone_number: 9567841250
+   user: one
+
+two:
+   first_name: MyString
+   second_name: MyString
+   second_last_name: MyString
+   first_last_name: MyString
+   birth_date: 2017-09-01
+   curp: MyString
+   rfc: MyString
+   gender: MyString
+   birth_state: MyString
+   phone_number: 965874123
+   user: two
+   

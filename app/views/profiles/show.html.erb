@@ -1,0 +1,67 @@
+<%= render 'shared/title_header', title: t('.title') %>
+
+<div class='row'>
+  <div class='col-sm-12'>
+    <div class='text-right'>
+      <%= link_to 'Editar', edit_profile_path(@profile), class: 'btn btn-info loading' %>
+    </div>
+  </div>
+</div>
+       
+<br/>
+
+<div class='row'>
+   <div class='col-sm-12'>    
+    <table class='table table-striped table-bordered'>
+      <tr>
+        <td class='col-sm-4'><strong><%= t('.first_name') %></strong></td>
+        <td><%= @profile.first_name %></td>
+      </tr>     
+
+      <tr>
+        <td class='col-sm-4'><strong><%= t('.second_name') %></strong></td>
+        <td><%= @profile.second_name %></td>
+      </tr>    
+
+      <tr>
+        <td class='col-sm-4'><strong><%= t('.first_last_name') %></strong></td>
+        <td><%= @profile.first_last_name %></td>
+      </tr>
+
+      <tr>
+        <td class='col-sm-4'><strong><%= t('.second_last_name') %></strong></td>
+        <td><%= @profile.second_last_name %></td>
+      </tr>     
+
+      <tr>
+        <td class='col-sm-4'><strong><%= t('.birth_date') %></strong></td>
+        <td><%= l @profile.birth_date, format: :full_month %></td>
+      </tr>
+
+      <tr>
+        <td class='col-sm-4'><strong><%= t('.curp') %></strong></td>
+        <td><%= @profile.curp %></td>
+      </tr>
+
+      <tr>
+        <td class='col-sm-4'><strong><%= t('.rfc') %></strong></td>
+        <td><%= @profile.rfc %></td>
+      </tr>
+
+      <tr>
+        <td class='col-sm-4'><strong><%= t('.gender') %></strong></td>
+        <td><%= @profile.gender %></td>
+      </tr>
+
+      <tr>
+        <td class='col-sm-4'><strong><%= t('.birth_state') %></strong></td>
+        <td><%= @profile.birth_state %></td>
+      </tr>
+
+      <tr>
+        <td class='col-sm-4'><strong><%= t('.phone_number') %></strong></td>
+        <td><%= number_to_phone @profile.phone_number %></td>
+      </tr>
+    </table>
+  </div>  
+</div>

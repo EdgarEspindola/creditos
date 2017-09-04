@@ -1,0 +1,109 @@
+es:
+  simple_form:
+    "yes": 'Si'
+    "no": 'No'
+    required:
+      text: 'Campo Obligatorio'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "Por favor revisa los campos de abajo marcados en rojo."
+      
+    labels:
+      profile:
+        first_name: 'Primer Nombre:'
+        second_name: 'Segundo Nombre:'
+        first_last_name: 'Apellido Paterno:'
+        second_last_name: 'Apellido Materno:'
+        birth_date: 'Fecha de Nacimiento:'
+        gender: 'Genero:'
+        birth_state: 'Lugar de Nacimiento:'
+        phone_number: 'Número de Teléfono:'
+        rfc: 'RFC:'
+        curp: 'CURP:'   
+
+      user:
+        name: 'Nombre:'
+        email: 'Correo Electrónico:'     
+        password: 'Contraseña:'
+        password_confirmation: 'Confirmación de la contraseña'
+        remember_me: ¿Recordar la sesión?
+
+      requisition:
+        income: 'Ingreso:'
+        address_years: '¿Cuantos años llevas en tu domicilio actual?'
+        company_years: '¿Cuantos años llevas en tu compañia?'
+        marital_status: 'Estado Civil:'
+        requested_amount: 'Cantidad Solicitada:'
+        payment_terms: 'Términos de Pago:'
+        bank: 'Banco:'
+        comment: 'Comentario:'
+        company_name: 'Nombre de la Compañia:'
+        company_phone_number: 'Número Teléfonico de la Compañia:'
+        dependents_number: '¿Cuantas personas dependen de usted?'
+        company_position: '¿Posición actual en la Compañia?'
+        has_sgmm: ¿Cuenta con gastos de seguros médicos mayores?
+        has_imss: ¿Cuenta con IMSS?
+        has_car: ¿Cuenta con automovil propio?
+
+      personal_references:
+        first_name: 'Primer Nombre:'
+        second_name: 'Segundo Nombre:'
+        first_last_name: 'Apellido Paterno:'
+        second_last_name: 'Apellido Materno:'
+        cell_phone_number: 'Número de Celular:'
+
+        
+    hints:
+      profile:
+        phone_number: 'Proporciona un número de teléfono valido.'
+        rfc: 'Asegurate que el formato del RFC sea correcto.'
+        curp: 'Asegurate que el formato de la CURP sea correcto.'        
+
+      requisition:
+        income: Proporciona una cantidad númerica.
+        address_years: Proporciona los años en números.
+        company_years: Proporciona los años en números.
+        requested_amount: Proporciona una cantidad númerica.
+        company_phone_number: 'Por ejemplo: 7456982310.'
+        dependents_number: Proporciona el total de personas en números.
+
+      personal_reference:
+        cell_phone_number: 'Introduce los diez números para telonos celulares.'
+
+    placeholders:
+      user:
+        name: ''
+        password: ''
+        
+    include_blanks:
+      profile:
+        first_name: 'Rather not say'
+        
+    prompts:
+      profile:
+        gender: 'Selecciona una opción'
+
+      requisition:
+        marital_status: Selecciona una opción
+    # Examples
+    # labels:
+    #   defaults:
+    #     password: 'Password'
+    #   user:
+    #     new:
+    #       email: 'E-mail to sign in.'
+    #     edit:
+    #       email: 'E-mail.'
+    # hints:
+    #   defaults:
+    #     username: 'User name to sign in.'
+    #     password: 'No special characters, please.'
+    # include_blanks:
+    #   defaults:
+    #     age: 'Rather not say'
+    # prompts:
+    #   defaults:
+    #     age: 'Select your age'

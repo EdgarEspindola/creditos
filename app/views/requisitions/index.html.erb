@@ -1,0 +1,34 @@
+<%= render 'shared/title_header', title:  t('.title') %>
+
+<% if @requisitions.blank? %>
+  <br/>
+  <h4 class="text-info">Aun no tienes solicitudes registradas, <%= link_to t('.requisitions.create_link'), new_requisition_path %> </h4>
+<% else %>
+  <table class="table table-sm">
+    <thead>
+      <tr scope="row">
+        <th><%= t('.requisitions.number') %></th>
+        <th><%= t('.requisitions.income') %></th>
+        <th><%= t('.requisitions.requested_amount') %></th>
+        <th><%= t('.requisitions.company_name') %></th>
+        <th><%= t('.requisitions.marital_status') %></th>
+      
+        <th colspan="3"><%= t('.requisitions.options') %></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @requisitions.each_with_index do |requisition, index| %>
+        <tr>
+          <td><%= index + 1 %></td>
+          <td><%= number_to_currency requisition.income %></td>
+          <td><%= number_to_currency requisition.requested_amount %></td>
+          <td><%= requisition.company_name %></td>
+          <td><%= requisition.marital_status %></td> 
+          <td><%= link_to t('.requisitions.show_link'), requisition %></td>
+          <td><%= link_to t('.requisitions.edit_link'), edit_requisition_path(requisition) %></td>        
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

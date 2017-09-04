@@ -1,0 +1,33 @@
+<%= simple_form_for profile, html: { class: 'form-horizontal' }, wrapper: :horizontal_form,
+  wrapper_mappings: {
+    check_boxes: :horizontal_radio_and_checkboxes,
+    radio_buttons: :horizontal_radio_and_checkboxes,
+    file: :horizontal_file_input,
+    boolean: :horizontal_boolean,
+    date: :multi_select_horizontal
+  } do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :first_name %>
+
+  <%= f.input :second_name %>
+
+  <%= f.input :first_last_name %>
+
+  <%= f.input :second_last_name %>
+
+  <%= f.input :birth_date, start_year: Date.today.year - 90,
+                           end_year: Date.today.year - 12 %>
+
+  <%= f.input :gender, collection: Profile.genders.values, prompt: :translate %>
+
+  <%= f.input :birth_state %>
+
+  <%= f.input :phone_number %>
+
+  <%= f.input :curp %>
+
+  <%= f.input :rfc %>
+   
+  <%= f.button :submit, class: 'btn btn-primary btn-lg btn-block' %>
+<% end %>

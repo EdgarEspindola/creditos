@@ -1,0 +1,61 @@
+<%= simple_form_for requisition, html: { class: 'form-horizontal' }, wrapper: :horizontal_form,
+  wrapper_mappings: {
+    check_boxes: :horizontal_radio_and_checkboxes,
+    radio_buttons: :horizontal_radio_and_checkboxes,
+    file: :horizontal_file_input,
+    boolean: :horizontal_boolean,
+    date: :multi_select_horizontal
+  } do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :income, wrapper: :horizontal_input_group do %>
+    <span class="input-group-addon">$</span>
+      <%= f.input_field :income, class: "form-control" %>    
+  <% end %>
+ 
+  <%= f.input :address_years %>
+
+  <%= f.input :company_years %>
+
+  <%= f.input :marital_status, collection: Requisition.marital_status_enums.values, prompt: :translate %>
+
+  <%= f.input :requested_amount, wrapper: :horizontal_input_group do %>
+    <span class="input-group-addon">$</span>
+      <%= f.input_field :requested_amount, class: "form-control" %>    
+  <% end %>
+
+  <%= f.input :payment_terms %>
+
+  <%= f.input :bank %>
+
+  <%= f.input :comment %>
+
+  <%= f.input :company_name %>
+
+  <%= f.input :company_phone_number %>
+
+  <%= f.input :dependents_number %>
+
+  <%= f.input :company_position %>
+
+  <%= f.input :has_sgmm, as: :boolean, checked_value: true, unchecked_value: false %>
+
+  <%= f.input :has_imss, as: :boolean, checked_value: true, unchecked_value: false %>
+
+  <%= f.input :has_car, as: :boolean, checked_value: true, unchecked_value: false %>
+   
+  <div class="panel-heading">
+    <div class="panel-title text-center">
+      <h3 class="title alert alert-light"><%= t('.personal_references_title') %></h3>
+      <hr/>
+    </div>
+  </div> 
+
+  <div id='personal_references'>
+    <%= f.simple_fields_for :personal_references do |personal_reference| %>
+      <%= render 'personal_reference_fields', f: personal_reference %>
+    <% end %>    
+  </div>
+
+  <%= f.button :submit, class: 'btn btn-primary btn-lg btn-block' %>
+<% end %>

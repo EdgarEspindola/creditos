@@ -1,0 +1,47 @@
+<%= form_for(personal_reference) do |f| %>
+  <% if personal_reference.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(personal_reference.errors.count, "error") %> prohibited this personal_reference from being saved:</h2>
+
+      <ul>
+      <% personal_reference.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :second_name %>
+    <%= f.text_field :second_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :first_last_name %>
+    <%= f.text_field :first_last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :second_last_name %>
+    <%= f.text_field :second_last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cell_phone_number %>
+    <%= f.number_field :cell_phone_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :requisition_id %>
+    <%= f.text_field :requisition_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

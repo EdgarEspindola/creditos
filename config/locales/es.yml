@@ -1,0 +1,199 @@
+es:
+  helpers:
+      submit:
+        profile:
+          create: Crear Perfil      
+          update: Actualizar Perfíl  
+
+        requisition:
+          create: Crear Solicitud
+          update: Actualizar Solicitud
+  date:
+    abbr_day_names:
+    - dom
+    - lun
+    - mar
+    - mié
+    - jue
+    - vie
+    - sáb
+    abbr_month_names:
+    - 
+    - ene
+    - feb
+    - mar
+    - abr
+    - may
+    - jun
+    - jul
+    - ago
+    - sep
+    - oct
+    - nov
+    - dic
+    day_names:
+    - Domingo
+    - Lunes
+    - Martes
+    - Miércoles
+    - Jueves
+    - Viernes
+    - Sábado
+    formats:
+      default: "%d/%m/%Y"
+      long: "%m, %d de %Y"
+      short: "%d de %b"
+      full_month: "%d de %B de %Y"
+    month_names:
+    - 
+    - Enero
+    - Febrero
+    - Marzo
+    - Abril
+    - Mayo
+    - Junio
+    - Julio
+    - Agosto
+    - Septiembre
+    - Octubre
+    - Noviembre
+    - Diciembre
+    order:
+    - :day
+    - :month
+    - :year
+
+  time:
+    am: am
+    formats:
+      default: "%a, %d de %b de %Y a las %H:%M:%S %Z"
+      long: "%A, %d de %B de %Y a las %I:%M %p"
+      short: "%d de %b a las %H:%M hrs"
+    pm: pm
+    
+  profiles:
+    created: En hora buena, tu Perfíl ha sido exitosamente creado.
+    updated: Tu Perfíl ha sido exitosamente actualizado.
+    blank: Para continuar, es necesario tener un Perfíl.
+    invalid: El perfíl al que desea acceder no es valido.
+    new:
+      registration_profile_title: Creación de Perfíl - Formulario de Registro
+    edit:
+      edit_profile_title: Actualización de Perfíl - Formulario de Registro
+    show:
+      title: Su Perfíl
+      first_name: 'Primer Nombre:'
+      second_name: 'Segundo Nombre:'
+      first_last_name: 'Apellido Paterno:'
+      second_last_name: 'Apellido Materno:'
+      birth_date: 'Fecha de Nacimiento:'
+      curp: 'CURP:'
+      rfc: 'RFC'
+      gender: 'Genéro:'
+      birth_state: 'Lugar de Nacimiento:'
+      phone_number: 'Número Teléfonico:'
+
+  devise:
+    sessions:
+      new:
+        log_in: Ingresar
+        button_log_in: Acceder
+        button_log_in_facebook: Acceder con Facebook
+        not_account: ¿No tienes una cuenta?
+        create_account: Crea una desde aqui
+
+    registrations:
+      new:
+        sign_up: Registrarse
+        log_in: Acceder
+        button_log_in_facebook: Acceder con Facebook
+        or: o
+
+  requisitions:
+    created: En hora buena, solicitud creada exitosamente.
+    updated: Solicitud actualizada exitosamente.
+    invalid: La solicitud a la que desea acceder no es valida.
+    index:
+      title: Mis solicitudes
+      requisitions:      
+        number: '#'
+        income: Salario
+        address_year: Antiguedad en su Domicilio
+        address_company: Antiguedad en su Compañia
+        marital_status: Estado Civil
+        requested_amount: Cantidad Solicitada
+        company_name: Nombre de la Compañia
+        options: Opciones
+        create_link: empieza aquí
+        show_link: 'Ver Detalles'
+        edit_link: 'Editar'
+
+    new:
+      title: Nueva Solicitud de Crédito
+    edit: 
+      title_edit: Actualización de la Solicitud de Crédito
+    form:
+      personal_references_title: Proporcione datos de tres referencias personales
+
+    show:
+      title: Datos de su Solicitud
+      income: 'Su Ingreso:'
+      address_years: 'Años viviendo en su Domicilio Actual:'
+      company_years: 'Antiguedad en su Compañia:'
+      marital_status: 'Estado Civil:'
+      requested_amount: 'Cantidad Solicitada:'
+      payment_terms: 'Terminos de Pago:'
+      bank: 'Nombre del Banco:'
+      comment: 'Comentarios:'
+      company_name: 'Nombre de su Compañia:'
+      company_phone_number: 'Número Teléfonico de su Compañia:'
+      dependents_number: 'Total de Personas que dependen de usted:'
+      company_position: 'Posicion Actual en su Compañia:'
+      has_sgmm: ¿Cuenta con seguro de gastos médicos mayores?
+      has_imss: ¿Cuenta con Seguridad Social?
+      has_car: ¿Cuenta con Automovil propio?
+      created_at: 'Solicitada por primera vez:'
+      updated_at: 'Actualizada por última vez:'
+      personal_references_title: Sus Referencias Personales
+
+  personal_references: 
+    personal_reference:
+      first_name: 'Primer Nombre:'
+      second_name: 'Segundo Nombre:'
+      first_last_name: 'Apellido Paterno:'
+      second_last_name: 'Apellido Materno:'
+      cell_phone_number: 'Número Teléfonico de Celular:'
+
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: Proporciona tu nombre.
+              uniqueness: Al parecer este nombre y el correo ya existen.
+            email: 
+              blank: Introduce una cuenta de correo valida.
+              taken: Esta cuenta de correo ya esta registrada.
+              invalid: Introduce una cuenta de correo valida.
+            password:
+              blank: Proporciona tu contraseña.
+              too_short: "Demasiado corta, minimo %{count} carácteres."
+            password_confirmation:
+              blank: Confirma la contraseña.
+              confirmation: Al parecer las contraseñas no son iguales.
+
+        personal_reference:
+          attributes:
+            cell_phone_number:
+              wrong_length: Proporciona los diez números.
+
+      messages:
+        blank: no puede estar vacio
+        invalid: no es valido
+        taken: ya existe
+        too_short: 'es demasiado corto, por lo menos %{count} números'
+
+  password:
+    minimum:
+      length: Introduce por lo menos seis carácteres.

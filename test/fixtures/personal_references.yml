@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+ one:
+   first_name: MyString
+   second_name: MyString
+   first_last_name: MyString
+   second_last_name: MyString
+   cell_phone_number: 1598632104
+   requisition: one
+
+ two:
+   first_name: MyString
+   second_name: MyString
+   first_last_name: MyString
+   second_last_name: MyString
+   cell_phone_number: 1895314786
+   requisition: one
+   
+three:
+   first_name: MyString
+   second_name: MyString
+   first_last_name: MyString
+   second_last_name: MyString
+   cell_phone_number: 8952365478
+   requisition: one

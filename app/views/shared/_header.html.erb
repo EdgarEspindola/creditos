@@ -1,0 +1,25 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Creditos Personales</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><%= link_to "Mis Solicitudes", root_path %></li>
+      <li><%= link_to "Solicitar un credito", new_requisition_path %></li>
+      <li><%= link_to "Mi Perfíl", current_user.profile %></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> <%= current_user.profile ? current_user.profile[:first_name] : current_user[:name] %></a></li>
+      <li>
+        <%= link_to destroy_user_session_path, method: :delete  do %>
+          <span class="glyphicon glyphicon-log-in"></span> 
+          Cerrar Sesión
+        <% end %>  
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+    
+  

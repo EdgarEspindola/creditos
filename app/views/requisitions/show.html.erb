@@ -1,0 +1,96 @@
+<h3 class="text-info text-center"><%= t('.title') %></h3>
+<br/>
+
+<div class='row'>
+  <div class='col-sm-offset-6 col-sm-6'>
+    <span><%= t('.created_at')%></span>
+    <span class="text-muted"><%= l @requisition.created_at, format: :long %></span>
+  </div>
+  <div class='col-sm-12'>    
+    <table class='table table-striped table-bordered'>
+      
+      <tr>
+        <td class='col-sm-4'><strong><%= t('.income') %></strong></td>
+        <td><%= number_to_currency @requisition.income %></td>
+      </tr>
+
+      <tr>
+        <td><strong><%= t('.address_years') %></strong></td>
+        <td><%= "#{@requisition.address_years} años" %></td>
+      </tr>
+
+      <tr>
+        <td><strong><%= t('.company_years') %></strong></td>
+        <td><%= "#{@requisition.company_years} años" %></td>
+      </tr>
+
+      <tr>
+        <td><strong><%= t('.marital_status') %></strong></td>
+        <td><%= @requisition.marital_status %></td>
+      </tr>
+
+      <tr>
+        <td><strong><%= t('.requested_amount') %></strong></td>
+        <td><%= number_to_currency @requisition.requested_amount %></td>
+      </tr>
+
+      <tr>
+        <td><strong><%= t('.payment_terms') %></strong></td>
+        <td><%= @requisition.payment_terms %></td>
+      </tr>
+
+      <tr>
+        <td><strong><%= t('.bank') %></strong></td>
+        <td><%= @requisition.bank %></td>
+      </tr>
+
+      <tr>
+        <td><strong><%= t('.comment') %></strong></td>
+        <td><%= @requisition.comment %></td>
+      </tr>
+
+      <tr>
+        <td><strong><%= t('.company_name') %></strong></td>
+        <td><%= @requisition.company_name %></td>
+      </tr>
+
+       <tr>
+        <td><strong><%= t('.company_phone_number') %></strong></td>
+        <td><%= number_to_phone @requisition.company_phone_number %></td>
+      </tr>
+
+      <tr>
+        <td><strong><%= t('.dependents_number') %></strong></td>
+        <td><%= "#{@requisition.dependents_number} personas" %></td>
+      </tr>
+
+      <tr>
+        <td><strong><%= t('.company_position') %></strong></td>
+        <td><%= @requisition.company_position %></td>
+      </tr>
+
+      <tr>
+        <td><strong><%= t('.has_sgmm') %></strong></td>
+        <td><%= @requisition.has_sgmm ? 'Si' : 'No' %></td>
+      </tr>
+
+      <tr>
+        <td><strong><%= t('.has_imss') %></strong></td>
+        <td><%= @requisition.has_imss ? 'Si' : 'No' %></td>
+      </tr>
+
+      <tr>
+        <td><strong><%= t('.has_car') %></strong></td>
+        <td><%= @requisition.has_car ? 'Si' : 'No' %></td>
+      </tr>
+    </table>
+  </div>
+  <div class='col-sm-offset-6 col-sm-6'>
+    <span><%= t('.updated_at')%></span>
+    <span class="text-muted"><%= l @requisition.updated_at, format: :long %></span>
+  </div>
+</div>
+
+<h3 class="text-info text-center"><%= t('.personal_references_title') %></h3>
+
+<%= render @requisition.personal_references %>

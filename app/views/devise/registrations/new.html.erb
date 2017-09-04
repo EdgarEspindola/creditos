@@ -1,0 +1,68 @@
+<div style="margin-top:50px" class="mainbox col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <div class="panel-title"><%= t('.sign_up') %></div>
+        <div style="float:right; font-size: 85%; position: relative; top:-10px">
+          <%= link_to t('.log_in'), new_session_path(resource_name), class: "text" %>          
+        </div>
+      </div>  
+      <div class="panel-body" >
+        <%= simple_form_for resource, as: resource_name, url: registration_path(resource_name), html: { class: 'form-horizontal' }, 
+            wrapper: :horizontal_input_group,
+            wrapper_mappings: {
+              check_boxes: :horizontal_radio_and_checkboxes,
+              radio_buttons: :horizontal_radio_and_checkboxes,
+              file: :horizontal_file_input,
+              boolean: :horizontal_boolean
+          } do |f| %>
+
+          <%= f.error_notification %>
+
+           <div class="form-inputs">
+            <%= f.input :name, wrapper: :horizontal_input_group do %>
+              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+              <%= f.input_field :name, class: "form-control", input_html: {autofocus: true} %>              
+            <% end %>
+          </div>
+
+          <div class="form-inputs">
+            <%= f.input :email, wrapper: :horizontal_input_group do %>
+              <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+              <%= f.input_field :email, class: "form-control" %>              
+            <% end %>
+          </div>
+
+          <div class="form-inputs">
+            <%= f.input :password, wrapper: :horizontal_input_group, hint: (t('password.minimum.length') if @minimum_password_length) do %>
+              <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+              <%= f.input_field :password, class: "form-control", autocomplete: "off" %>                
+            <% end %>
+          </div>
+
+          <div class="form-inputs">
+            <%= f.input :password_confirmation, wrapper: :horizontal_input_group do %>
+              <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+              <%= f.input_field :password_confirmation, class: "form-control", autocomplete: "off" %>                
+            <% end %>
+          </div>
+
+          <div class="form-group">
+            <div class="col-md-offset-3 col-md-9">
+              <button id="btn-signup" type="submit" class="btn btn-info">
+                <i class="icon-hand-right"></i>&nbsp<%= t('.sign_up') %>
+              </button>
+              <span style="margin-left:8px;"><%= t('.or') %></span>  
+            </div>
+          </div>
+
+           <div style="border-top: 1px solid #999; padding-top:20px;"  class="form-group">
+            <div class="col-md-offset-3 col-md-9">
+              <%= link_to t('.button_log_in_facebook'), user_facebook_omniauth_authorize_path, class: "text_white btn btn-primary" %>            
+            </div>                                           
+          </div>
+
+        <% end %>
+      </div>
+    </div>
+  </div> 
+</div>
