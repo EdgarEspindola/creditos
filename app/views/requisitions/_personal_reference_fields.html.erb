@@ -1,9 +1,12 @@
 <div class='nested-fields'>
-	<%= f.input :first_name %>
-	<%= f.input :second_name %>
-	<%= f.input :first_last_name %>
-	<%= f.input :second_last_name %>
-	<%= f.input :cell_phone_number %>  
+  <%= f.input :first_name %>
+  <%= f.input :second_name %>
+  <%= f.input :first_last_name %>
+  <%= f.input :second_last_name %>
+  <%= f.input :cell_phone_number %>  
+  <div class='text-right'>
+    <%= link_to_remove_association "Quitar", f, class: 'btn btn-warning' %>
+  </div>        
+  <hr/>
 </div>
-<hr/>
-  
+

@@ -17,10 +17,8 @@ class RequisitionsController < ApplicationController
   # GET /requisitions/new
   def new
     @requisition = Requisition.new
-    (1..3).each do |number|
-      @requisition.personal_references.build
-      end
-    end
+    @requisition.personal_references.build
+  end
 
   # GET /requisitions/1/edit
   def edit

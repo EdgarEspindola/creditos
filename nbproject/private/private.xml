@@ -2,17 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/home/kadasoftware/Documents/PROYECTOS/Rails/YoTePresto/creditos/app/assets/javascripts/application.js</file>
-            <file>file:/home/kadasoftware/Documents/PROYECTOS/Rails/YoTePresto/creditos/app/models/profile.rb</file>
-            <file>file:/home/kadasoftware/Documents/PROYECTOS/Rails/YoTePresto/creditos/app/views/profiles/new.html.erb</file>
-            <file>file:/home/kadasoftware/Documents/PROYECTOS/Rails/YoTePresto/creditos/app/views/layouts/application.html.erb</file>
-            <file>file:/home/kadasoftware/Documents/PROYECTOS/Rails/YoTePresto/creditos/Gemfile</file>
-            <file>file:/home/kadasoftware/Documents/PROYECTOS/Rails/YoTePresto/creditos/config/initializers/simple_form_bootstrap.rb</file>
-            <file>file:/home/kadasoftware/Documents/PROYECTOS/Rails/YoTePresto/creditos/app/controllers/requisitions_controller.rb</file>
-            <file>file:/home/kadasoftware/Documents/PROYECTOS/Rails/YoTePresto/creditos/app/views/profiles/_form.html.erb</file>
-            <file>file:/home/kadasoftware/Documents/PROYECTOS/Rails/YoTePresto/creditos/config/environment.rb</file>
-            <file>file:/home/kadasoftware/Documents/PROYECTOS/Rails/YoTePresto/creditos/config/spring.rb</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
